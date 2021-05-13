@@ -12,18 +12,6 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'nvim-lua/completion-nvim'
 
 
-
-" Collection of common configurations for the Nvim LSP client
-Plug 'neovim/nvim-lspconfig'
-
-" Extensions to built-in LSP, for example, providing type inlay hints
-Plug 'nvim-lua/lsp_extensions.nvim'
-
-" Autocompletion framework for built-in LSP
-Plug 'nvim-lua/completion-nvim'
-
-
-
 "Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
