@@ -1,7 +1,7 @@
 call plug#begin()
 "Rust and lsp
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/lsp-extensions.nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'nvim-lua/completion-nvim'
 
 "Themes
