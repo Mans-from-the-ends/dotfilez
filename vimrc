@@ -9,6 +9,10 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
+set hidden
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
 
 " always show the status bar
 set laststatus=2
