@@ -1,9 +1,14 @@
 call plug#begin()
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+"Rust and lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/lsp-extensions.nvim'
+Plug 'nvim-lua/completion-nvim'
+
+"Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"GotGit
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
