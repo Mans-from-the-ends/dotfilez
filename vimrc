@@ -1,17 +1,9 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 "Rust and lsp
 
-" Collection of common configurations for the Nvim LSP client
-Plug 'neovim/nvim-lspconfig'
-
-" Extensions to built-in LSP, for example, providing type inlay hints
-Plug 'nvim-lua/lsp_extensions.nvim'
-
-" Autocompletion framework for built-in LSP
-Plug 'nvim-lua/completion-nvim'
-
-
+Plug 'dense-analysis/ale'
+Plug 'rust-lang/rust.vim'
 "Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
@@ -22,6 +14,16 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
+
+"Rust
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+" Required, explicitly enable Elixir LS
+let g:ale_linters = {
+\  'rust': ['analyzer'],
+\}
 
 " always show the status bar
 set laststatus=2
