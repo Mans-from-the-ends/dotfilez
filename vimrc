@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
