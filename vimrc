@@ -1,9 +1,9 @@
+let g:ale_disable_lsp = 1
 call plug#begin()
 
-"Rust and lsp
-
+"Rust
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'rust-lang/rust.vim'
 "Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
@@ -16,14 +16,10 @@ filetype plugin indent on
 syntax on
 
 "Rust
-set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1
-nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
-let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
-" Required, explicitly enable Elixir LS
-let g:ale_linters = {
-\  'rust': ['analyzer'],
-\}
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
+let g:rust_clip_command = 'xclip -selection clipboard'
 
 " always show the status bar
 set laststatus=2
