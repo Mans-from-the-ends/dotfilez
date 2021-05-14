@@ -1,3 +1,8 @@
+syntax enable
+filetype plugin indent on
+
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
 call plug#begin()
 
 "Rust and lsp
@@ -12,18 +17,22 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-filetype plugin indent on
-syntax on
 
 "Rust
-set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1
-nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
-let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
-" Required, explicitly enable Elixir LS
+
 let g:ale_linters = {
 \  'rust': ['analyzer'],
 \}
+
+let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+
+" Optional, configure as-you-type completions
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+
+nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
+
+
 
 " always show the status bar
 set laststatus=2
