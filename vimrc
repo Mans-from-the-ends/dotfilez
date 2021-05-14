@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 let g:ale_disable_lsp = 1
-=======
 syntax enable
 filetype plugin indent on
 
-autocmd BufNewFile,BufRead *.rs set filetype=rust
-
->>>>>>> 290d09286b18acbb3713167b3078727ce2ee3fef
 call plug#begin()
 
 "Rust
@@ -22,25 +17,10 @@ call plug#end()
 
 
 "Rust
-<<<<<<< HEAD
 let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 let g:rust_clip_command = 'xclip -selection clipboard'
-=======
-
-let g:ale_linters = {
-\  'rust': ['analyzer'],
-\}
->>>>>>> 290d09286b18acbb3713167b3078727ce2ee3fef
-
-let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
-
-" Optional, configure as-you-type completions
-set completeopt=menu,menuone,preview,noselect,noinsert
-let g:ale_completion_enabled = 1
-
-nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
 
 
 
