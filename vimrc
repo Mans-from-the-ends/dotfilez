@@ -5,6 +5,7 @@ filetype plugin indent on
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 "Rust
+Plug 'mattn/webapi-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
