@@ -6,7 +6,6 @@ module.exports = {
           "hyper-pane",
           "hypercwd",
           "hyper-active-tab",
-          "hyperline",
           "hyperpower"
         ],
         config: {
@@ -18,4 +17,3 @@ module.exports = {
   }
   // rest of the file
 }
-
