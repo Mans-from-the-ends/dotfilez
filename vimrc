@@ -3,6 +3,18 @@ syntax enable
 filetype plugin indent on
 
 call plug#begin()
+"telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"GTest
+Plug 'alepez/vim-gtest'
+"fff
+Plug 'dylanaraps/fff.vim'
+"fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"Floatterm
+Plug 'voldikss/vim-floaterm'
 Plug 'sheerun/vim-polyglot'
 "Rust
 Plug 'mattn/webapi-vim'
@@ -23,6 +35,26 @@ call plug#end()
 
 
 map <SPACE> <Leader>
+
+"fff
+" Open fff on press of 'f'
+nnoremap <Leader>fm :F<CR>
+" Vertical split (NERDtree style).
+let g:fff#split = "30vnew"
+" Open split on the left side (NERDtree style).
+let g:fff#split_direction = "nosplitbelow nosplitright"
+
+
+
+
+"fzf
+nnoremap <Leader>ff :Files<Cr>
+let g:fzf_layout = { 'down': '40%' }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
+"Floatterm
+let g:floaterm_keymap_new = '<Leader>ft'
+let g:floaterm_keymap_toggle = '<Leader>t'
 
 "C
 
