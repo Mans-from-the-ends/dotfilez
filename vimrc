@@ -3,7 +3,12 @@ syntax enable
 filetype plugin indent on
 
 call plug#begin()
+"Startify
+Plug 'mhinz/vim-startify'
+"Sneak
+Plug 'justinmk/vim-sneak'
 "telescope
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 "GTest
@@ -36,6 +41,12 @@ call plug#end()
 
 map <SPACE> <Leader>
 
+"Startify
+let g:startify_custom_header =
+          \ 'startify#center(startify#fortune#cowsay())'
+"Sneak
+let g:sneak#label = 1
+
 "fff
 " Open fff on press of 'f'
 nnoremap <Leader>fm :F<CR>
@@ -44,13 +55,11 @@ let g:fff#split = "30vnew"
 " Open split on the left side (NERDtree style).
 let g:fff#split_direction = "nosplitbelow nosplitright"
 
-
-
-
-"fzf
-nnoremap <Leader>ff :Files<Cr>
-let g:fzf_layout = { 'down': '40%' }
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+"Telescope
+nnoremap <Leader>ff <cmd>Telescope find_files<cr>
+nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <Leader>fb <cmd>Telescope buffers<cr>
+nnoremap <Leader>fh <cmd>Telescope help_tags<cr>
 
 "Floatterm
 let g:floaterm_keymap_new = '<Leader>ft'
