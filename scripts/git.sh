@@ -5,3 +5,5 @@ git add --all
 git commit -m "Autocommit janne!"
 
 git push
+
+git status
