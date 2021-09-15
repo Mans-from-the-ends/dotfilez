@@ -114,7 +114,10 @@ bindkey ' ' magic-space                               # [Space] - don't do histo
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
+#home
+bindkey -s 'home' 'cd /mnt/c/Users/Anton'
+#
+#
 # file rename magick
 bindkey "^[m" copy-prev-shell-word
 

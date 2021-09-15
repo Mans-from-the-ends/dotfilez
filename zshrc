@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/h4sh/.oh-my-zsh"
+export ZSH="/home/icePick/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -139,6 +139,6 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
-source /home/h4sh/.zsh/key-bindings.zsh
-source /home/h4sh/.zsh/aliases.zsh
-export PATH=/home/h4sh/.exa:$PATH
+source /home/icePick/zsh/key-bindings.zsh
+source /home/icePick/zsh/aliases.zsh
+export PATH=/home/icePick/.exa:$PATH
