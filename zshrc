@@ -139,6 +139,6 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
-source /home/icePick/zsh/key-bindings.zsh
-source /home/icePick/zsh/aliases.zsh
+source /home/icePick/.zsh/key-bindings.zsh
+source /home/icePick/.zsh/aliases.zsh
 export PATH=/home/icePick/.exa:$PATH
