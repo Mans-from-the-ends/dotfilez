@@ -8,7 +8,7 @@
 
 dir=~/dotfilez                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc zshrc Hyper.js scripts zsh"    # list of files/folders to symlink in homedir
+files="bashrc zshrc hyper.js scripts zsh vimrc"    # list of files/folders to symlink in homedir
 
 ##########
 
