@@ -13,17 +13,17 @@ files="bashrc zshrc hyper.js scripts zsh vimrc"    # list of files/folders to sy
 ##########
 # Initialising
 
-echo -n "STARTING THE CREATING OF SYMLINKS TO DOTFILEZ!"
+echo  "STARTING THE CREATING OF SYMLINKS TO DOTFILEZ!"
 
 
 
 # create dotfiles_old in homedir
 mkdir -p $olddir
-echo -n "CLONING..."
+echo  "CLONING..."
 
 # change to the dotfiles directory
 cd $dir
-echo -n "BACKING UP..."
+echo  "BACKING UP..."
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
@@ -31,6 +31,6 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-echo -n "SETUP HAS BEEN COMPLETED, IF UNSATISFIED WITH SYMLINKS CONSIDER USING REMOVE EXECUTABLE"
+echo  "SETUP HAS BEEN COMPLETED, IF UNSATISFIED WITH SYMLINKS CONSIDER USING REMOVE EXECUTABLE"
 
-echo -n "CYA!"
+echo  "CYA!"
